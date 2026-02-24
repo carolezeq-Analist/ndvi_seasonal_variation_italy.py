@@ -48,7 +48,7 @@ alpha = np.where(np.isnan(ndvi_norm), 0, 255).astype(np.uint8)
 rgba = np.dstack((colored_img, alpha))
 
 
-Image.fromarray(rgba).save(r"C:\\Users\\carol\\OneDrive\\Imagens\\PROJETOS\\pygis\\ndvi_diff_colored.png")
+Image.fromarray(rgba).save("ndvi_delta.tif")
 
 
 # 4️ CONFIGURAR BOUNDING BOX
@@ -120,5 +120,6 @@ m.get_root().html.add_child(folium.Element(html))
 
 
 m.save("index.html")
+
 
 print("WebGIS gerado com sucesso!")
